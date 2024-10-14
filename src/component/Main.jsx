@@ -71,8 +71,13 @@ const Main = () => {
   return (
     <>
       <div className=" sm:flex mt-[5vh]">
-        <div className=" sm:w-[29%] w-full text-center p-3 bg-slate-100">
-          <img src={image} alt="" className=" mx-4 my-5" />
+        <div className=" sm:w-[29%] w-full text-center p-3 bg-slate-100  flex-col justify-center  items-center">
+          <img
+            src={image}
+            alt=""
+            className=" mx-4 my-5 
+           w-[98%]"
+          />
           <div>
             <h1>Welcome to my FastXPartener</h1>
           </div>
@@ -94,7 +99,7 @@ const Main = () => {
           className="sm:w-[69%] p-3 w-full bg-slate-100
       sm:ml-[1%]"
         >
-          <img src={banner} alt="" />
+          <img src={banner} alt="" className="w-full" />
           <div>
             <p className=" text-green-500 mt-[3vh]">
               Drive Your Success with MyFastX
@@ -137,8 +142,8 @@ const Main = () => {
             />
           </div>
         </section>
-        <section className=" mt-[5vh] sm:flex">
-          <div className=" sm:w-[50%] w-full hidden sm:block">
+        <section className=" mt-[5vh] sm:flex min-h-[35vh]">
+          <div className=" sm:w-[50%] w-full hidden sm:block min-h-full   ">
             <span className="bg-slate-200 border-green-300 border-r-0 border-t-0 border-b-0  border-l-4 p-2 mt-[5vh] m-2 ">
               What our Partner says
             </span>
@@ -146,7 +151,7 @@ const Main = () => {
               Testimonials
             </h1>
             <p className=" sm:text-[17px]  hidden sm:block">{`At MyFastX, our commitment to excellence is reflected in the feedback from our valued customers. Here's what they have to say about their experiences with our quick and reliable delivery and logistics services`}</p>
-            <div className="flex mt-4">
+            <div className="flex mt-[10vh]   items-end">
               <img src="/First.png" alt="" />
               <img src="/Second.png" alt="" />
             </div>
@@ -167,7 +172,7 @@ const Main = () => {
         </section>
         <img src="/Line.png" alt="" className=" w-[100vw]  hidden sm:block" />
         <div className="flex">
-          <section className="  sm:block hidden w-[48%] border border-r-4 border-l-0 border-t-0 border-b-0">
+          <section className="  sm:block hidden w-[48%] border border-r-4 border-l-0 border-t-0 border-b-0 min-h-[60vh] ">
             <span className="bg-slate-200 border-green-300 border-r-0 border-t-0 border-b-0  border-l-4 p-2 mt-[5vh] m-2 ">
               What our Partner says
             </span>
@@ -179,18 +184,8 @@ const Main = () => {
 
             <p className="text-slate-400">{`For more information, Contact us at:`}</p>
             <section>
-              <div className=" flex gap-x-5 items-center m-3">
-                <p className=" w-[40px] h-[40px] bg-green-400 rounded-full flex justify-center  items-center">
-                  <FaPhoneAlt className="text-white" />
-                </p>
-                <span>+91-XXXXX XXXXX</span>
-              </div>
-              <div className=" flex gap-x-5 items-center m-3">
-                <p className=" w-[40px] h-[40px] bg-green-400 rounded-full flex justify-center  items-center">
-                  <MdEmail className="text-white" />
-                </p>
-                <span>support@myfastx.com</span>
-              </div>
+              <Phone />
+              <Email />
             </section>
           </section>
           <section className="p-3  sm:w-[50%] ">
@@ -207,14 +202,14 @@ const Main = () => {
             </div>
           </section>
         </div>
-        <div className=" bg-[#F2FAF5] p-4  sm:min-h-[40vh]  flex-col justify-center items-center sm:flex hidden">
+        <div className=" bg-[#F2FAF5] p-4  sm:min-h-[50vh]  flex-col justify-center items-center sm:flex hidden">
           <p className=" text-[15px] text-green-300">
             Drive Your Success with MyFastX
           </p>
           <h1 className=" font-semibold text-[25px]">
             Join Us as a Partner Driver
           </h1>
-          <span className=" sm:w-[50%] sm:text-[12px] text-center">
+          <span className=" sm:w-[50%] sm:text-[14px] text-center">
             Are you a vehicle owner looking for new opportunities? Join MyFastX
             today and become part of a dynamic network of drivers. With us,
             you’ll enjoy flexible work hours, competitive earnings, and the
@@ -222,9 +217,57 @@ const Main = () => {
           </span>
           <Button btnText={"Register now for just Rs. 999!"} />
         </div>
+        <div className="sm:hidden mt-[5vh]">
+          <span className="bg-slate-200 border-green-300 border-r-0 border-t-0 border-b-0  border-l-4 p-2  m-2 ">
+            Frequently asked Questions
+          </span>
+          <h1 className="sm:text-[30px] text-[25px]  font-bold mt-5 p-2">
+            {`Got Questions? We’ve Got Answers`}
+          </h1>
+
+          <p className="p-2">
+            {`Don't miss out on this incredible opportunity to be part of a leading delivery and logistics platform. Sign up now for just Rs.999 and start driving your way to success with MyFastX!`}
+          </p>
+          <Button btnText={"Register now "} />
+          <div className=" h-[30vh] bg-[#F2FAF5]  flex  flex-col justify-center items-center p-3 mt-[5vh]  ">
+            <h2 className="text-gray-500">For More Information</h2>
+            <h1 className="text-green-300 font-semibold  text-[20px]">
+              Contact us
+            </h1>
+            <div className="flex  text-nowrap  justify-around">
+              <div className=" bg-white p-1 mt-[2vh] ">
+                <Phone />
+              </div>
+              <div className=" bg-white p-1  ml-[8px] rounded-md rounded-r-none">
+                <Email />
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
     </>
   );
 };
 
 export default Main;
+
+const Phone = () => {
+  return (
+    <div className=" flex sm:gap-x-5 gap-x-1  items-center m-3">
+      <p className=" sm:w-[40px]  sm:h-[40px] h-[30px] w-[30px] bg-green-400 rounded-full flex justify-center  items-center">
+        <FaPhoneAlt className="text-white" />
+      </p>
+      <span className="text-[12px] sm:text-[17px]">+91-XXXXX XXXXX</span>
+    </div>
+  );
+};
+const Email = () => {
+  return (
+    <div className=" flex sm:gap-x-5  gap-x-1  items-center m-3">
+      <p className=" sm:w-[40px]  sm:h-[40px] h-[30px] w-[30px] bg-green-400 rounded-full flex justify-center  items-center">
+        <MdEmail className="text-white" />
+      </p>
+      <span className="text-[12px] sm:text-[17px]">support@myfastx.com</span>
+    </div>
+  );
+};
