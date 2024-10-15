@@ -2,7 +2,7 @@ import logo from "./../assets/Frame.png";
 
 export const Footer = () => {
   return (
-    <footer className="py-12 bg-gray-50 xl:pt-24 dark:bg-gray-800">
+    <footer className="py-12 bg-gray-500 xl:pt-24 dark:bg-gray-800">
       <img src={logo} alt="" />
       <div className="  sm:grid sm:grid-cols-3    p-2 grid-col-1  ">
         <div className=" text-white sm:col-span-1 ">
